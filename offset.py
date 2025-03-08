@@ -30,7 +30,7 @@ setup_seed(1)
 model1 = "qwen_3b_math"
 model2 = "qwen2_1.5b_mmlu" 
 model3 = "Qwen/Qwen2-1.5B"
-tokenizer = AutoTokenizer.from_pretrained(model3, token='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')
+tokenizer = AutoTokenizer.from_pretrained(model3, token='your_key')
 
 print('Models:', model1, model2, model3)
 
@@ -58,9 +58,9 @@ device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 # Load models to different GPUs
 models = [
-    AutoModelForCausalLM.from_pretrained(model1, token='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', device_map='auto'),
-    AutoModelForCausalLM.from_pretrained(model2, token='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', device_map='auto'),
-    AutoModelForCausalLM.from_pretrained(model3, token='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', device_map='auto')
+    AutoModelForCausalLM.from_pretrained(model1, token='your_key', device_map='auto'),
+    AutoModelForCausalLM.from_pretrained(model2, token='your_key', device_map='auto'),
+    AutoModelForCausalLM.from_pretrained(model3, token='your_key', device_map='auto')
 ]
 
 # models = [
